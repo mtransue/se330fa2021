@@ -22,7 +22,7 @@ public class Se330ExampleProject extends Application {
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
-        btn.setText("Say 'Hello World' hello");
+        btn.setText("Say 'Hello World' hello world");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
