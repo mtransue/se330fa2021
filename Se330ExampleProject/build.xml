@@ -4,14 +4,14 @@
         <delete dir="build"/>
     </target>
 
-    <target name="compile">
-        <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes"/>
+    <target name="compile" depends="clean">
+        <mkdir dir="build"/>
+        <javac srcdir="/src" destdir="build"/>
     </target>
 
-    <target name="jar">
+    <target name="jar" depends="compile">
         <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/Se330ExampleProject.jar" basedir="build/classes">
+        <jar destfile="build/jar/Se330ExampleProject.jar" basedir="/src">
             <manifest>
                 <attribute name="Main-Class" value="Se330ExampleProject"/>
             </manifest>
